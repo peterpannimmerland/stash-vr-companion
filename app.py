@@ -55,7 +55,7 @@ def get_scenes_with_tag( tag):
 
 def get_scenes(scene_filter):
     query = """query findScenes($scene_filter: SceneFilterType!) {
-findScenes(scene_filter: $scene_filter filter: {sort: "date",direction: DESC,per_page: -1} ) {
+findScenes(scene_filter: $scene_filter filter: {sort: "created_at",direction: DESC,per_page: -1} ) {
 count
 scenes {
   id
